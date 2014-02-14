@@ -1,0 +1,38 @@
+SQL Plan:
+
+Tables: [product: id  prevVersion ...] [+users: id usr pass  prevVersion...] [+session: id idClient idDeal prevVersion] [+deal: id idProduct  prevVersion]
+
+StorageProcedure:
++AddUser
++EditUser
++PrivateCopyUser
++DelUser
+
+AddProduct
+EditProduct
+PrivateCopyProduct
+DelProduct
+
++AddSession
++EditSession
++PrivateCopySession
++DelProduct
+
++AddClient
++EditClient
++PrivateCopyClient
++DelClient
+
++AddDeal
++EditDeal
++PrivateCopyDeal
++DelDeal
+
+SelectProductList: contract, offset, size
+CreateBackup:
+  block
+  selectAll
+  unblock
+
+LoadBackup:
+!Write local program to create local backup
